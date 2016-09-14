@@ -1,0 +1,17 @@
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/obj/Debug/Assembly-CSharp.dll
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/Temp/bin/Debug/UnityEngine.dll
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/Temp/bin/Debug/UnityEditor.dll
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/Temp/bin/Debug/Mono.Cecil.dll
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/Temp/bin/Debug/Unity.DataContract.dll
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/nielsdunn/Documents/2670Scripting/Star Catcher/Temp/bin/Debug/Mono.Cecil.Mdb.dll

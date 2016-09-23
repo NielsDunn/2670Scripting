@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/GE Files/Scenes/Prototype One.unity
+- path: Assets/GE Files/Scenes/Prototype Three.unity
   isLoaded: 1
   isActive: 1

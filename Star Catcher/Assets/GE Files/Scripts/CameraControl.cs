@@ -2,15 +2,18 @@
 using System.Collections;
 
 public class CameraControl : MonoBehaviour {
-	public float camSpeed = 10.0f;
+	public float speed = 1f;
+	private Vector3 tempPos;
 
+	void Update ()
+	{
+		MoveCamera ();
+	}
 
-	void Update () {
-         transform.Translate(Vector3.right * Time.deltaTime * camSpeed);
- 
-     }
+	void MoveCamera()
+	{
+		tempPos.x = speed * Time.deltaTime;
+		transform.Translate (tempPos);
+	}
 
-	void OnTriggerEnter(Collider collider){
-		this.transform.position = new Vector3 (0f, 2f, -10f);
- 		}
 }

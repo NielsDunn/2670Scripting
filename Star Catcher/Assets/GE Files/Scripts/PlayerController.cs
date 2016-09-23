@@ -63,6 +63,8 @@ public class PlayerController : MonoBehaviour {
 			StartCoroutine(Slide());
 		}
 
+
+	//Movement
 		if(Input.GetKey(KeyCode.LeftArrow)){
 			transform.position += Vector3.left * speed * Time.deltaTime;
 		}else if (Input.GetKey(KeyCode.RightArrow)){
@@ -80,7 +82,4 @@ public class PlayerController : MonoBehaviour {
    
  		}
 
- 		void OnTriggerEnter(Collider collider){
-			this.transform.position = new Vector3 (0f, 0f, 0f);
- 		}
 }

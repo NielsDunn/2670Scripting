@@ -17,9 +17,9 @@ TagManager:
   - Player
   - Ground
   - Recyclable
-  - 
-  - 
-  - 
+  - Recycler
+  - Level
+  - DeadZone
   - 
   - 
   - 

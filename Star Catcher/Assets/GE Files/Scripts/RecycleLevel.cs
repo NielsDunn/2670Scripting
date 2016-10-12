@@ -17,7 +17,7 @@ public class RecycleLevel : MonoBehaviour {
 	void Start () {
 		recycleList = new List<sendToRecycler>();
 		sendToRecycler.SendThis += SendThisHandler;
-		Statics.nextPosition = 43.0f;
+		Statics.nextPosition = 53.8f;
 	}
 
 	void OnTriggerEnter ()

@@ -20,8 +20,8 @@ TagManager:
   - Recycler
   - Level
   - DeadZone
-  - 
-  - 
+  - EnemyToGround
+  - EnemyToPlayer
   - 
   - 
   - 

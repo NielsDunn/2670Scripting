@@ -4,7 +4,8 @@ using System;
 
 public class sendToRecycler : MonoBehaviour {
 
-	public bool canRecycle = false;	
+	public bool canRecycle = false;
+		
 	public static Action<sendToRecycler> SendThis;
 
 	// Use this for initialization

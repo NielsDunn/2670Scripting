@@ -8,10 +8,19 @@ public class PlayerController : MonoBehaviour {
     private Vector3 tempPos;
     //Speed of the temp var in x
     public float speed = 1;
-    public float gravity = 1;
     public float jumpSpeed = 1;
+    public float gravity = 1;
     public int jumpCount = 0;
     public int jumpCountMax = 2;
+
+    //2D barrier stuff
+	public float sideForce = .5f;
+
+    void Start ()
+    {
+		myCC = GetComponent<CharacterController>();	
+    }
+
 	// Update is called once per frame
 	void Update () {
         //waiting for input and compparing jumpcount
@@ -30,11 +39,20 @@ public class PlayerController : MonoBehaviour {
             jumpCount = 0;
         }
         //adding the gravity var to the y position of the tempPos var
-        tempPos.y -= gravity;
+        //tempPos.y -= gravity;
         //adding the speed var to the tempPos var x value with the right and left arrow keys
         tempPos.x = speed*Input.GetAxis("Horizontal");
         //Moves the charactor controller at an even pace (deltaTime)
         myCC.Move(tempPos * Time.deltaTime);
+
+        //Stuff for forcing the character against the 2D Barrier
+		tempPos.y -= gravity*Time.deltaTime;
+		tempPos.z = sideForce;
+
+		if(myCC.isGrounded){
+			tempPos.y = 0;
+		}
+		myCC.Move(tempPos);
 	}
 
 }

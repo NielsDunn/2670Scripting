@@ -56,7 +56,7 @@ public class StarControl : MonoBehaviour {
 		print("10 Points");
 		scoreKeeper.AddScore (scoreValue);
         //gameObject.SetActive(false);
-        transform.position = new Vector3(0,-5,0);
+        transform.position = new Vector3(-20,-15,0);
 
     }
 
@@ -66,7 +66,7 @@ public class StarControl : MonoBehaviour {
 		if(endTime < 0)
          {
          	print("Star");
-			transform.position = new Vector3(0,-5,0);
+			transform.position = new Vector3(-20,-15,0);
          }
     }
 

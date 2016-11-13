@@ -17,6 +17,12 @@ public class ScoreKeeper : MonoBehaviour {
 		score += newScoreValue;
 		UpdateScore ();
 	}
+
+	public void MinusScore (int newScoreValue)
+	{
+		score -= newScoreValue;
+		UpdateScore ();
+	}
 	
 	void UpdateScore ()
     {

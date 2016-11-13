@@ -34,8 +34,8 @@ public class grounding : MonoBehaviour {
 	{	
 		print ("Minus 50 Points");
 		scoreKeeper.MinusScore (scoreValue);
-		speed *= -1;
-		//transform.position = startPoint;
+		//speed *= -1;
+		transform.position = startPoint;
 
 	}
 	
@@ -52,4 +52,5 @@ public class grounding : MonoBehaviour {
 			tempP.x = 0;
 		}
 	}
+
 }

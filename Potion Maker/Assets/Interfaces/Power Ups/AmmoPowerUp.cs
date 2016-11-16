@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AmmoPowerUp : MonoBehaviour, IPowerUp , IAddPoints{
+public class AmmoPowerUp : MonoBehaviour, IPowerUp{
 
 	public int points {
 		get {

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AddPoints : MonoBehaviour, IAddPoints {
+public class AddPoints : MonoBehaviour {
+
 
 	public void OnTriggerEnter ()
 	{

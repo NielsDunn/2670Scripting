@@ -15,12 +15,15 @@ public class movePlatform : MonoBehaviour
 	
 	// Update is called once per frame
 	protected virtual void Update () {
-		transform.Translate(Vector3.left * (objectSpeed * Time.deltaTime));
 
-		if (transform.localPosition.x <= resetPosition)
-		{
+		if (!GameManager.instance.GameOver) {
+			transform.Translate(Vector3.left * (objectSpeed * Time.deltaTime));
+
+			if (transform.localPosition.x <= resetPosition)
+			{
 			Vector3 newPos = new Vector3(startPosition, transform.position.y, transform.position.z);
 			transform.position = newPos;
+			}
 		}
 	}
 }

@@ -29,15 +29,17 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-
-		if (Input.GetMouseButtonDown (0)) 
+		if(!GameManager.instance.GameOver && GameManager.instance.GameStarted)
 		{
+			if (Input.GetMouseButtonDown (0)) 
+		{
+			GameManager.instance.StartGame();
 			anim.Play("Jump");
 			audioSource.PlayOneShot(sfxJump);
 			rigidBody.useGravity = true;
 			jump = true;
 		}
-	
+		}
 	}
 
 	void FixedUpdate()
@@ -58,6 +60,7 @@ public class Player : MonoBehaviour {
 			rigidBody.AddForce(new Vector2(-50,20), ForceMode.Impulse);
 			rigidBody.detectCollisions = false;
 			audioSource.PlayOneShot (sfxDeath);
+			GameManager.instance.PlayerCollided ();
 		}
 	}
 }

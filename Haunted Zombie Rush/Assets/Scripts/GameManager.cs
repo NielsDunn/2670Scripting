@@ -1,9 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Assertions;
 
 public class GameManager : MonoBehaviour {
 
 	public static GameManager instance = null;
+
+	[SerializeField] private GameObject mainMenu;
+
+	private bool playerActive = false;
+	private bool gameOver = false;
+	private bool gameStarted = false;
+
+	public bool PlayerActive
+	{
+		get { return playerActive;}
+	}
+
+	public bool GameOver 
+	{
+		get { return gameOver; }
+	}
+
+	public bool GameStarted
+	{
+		get { return gameStarted; }
+	}
 
 	void Awake()
 	{
@@ -16,6 +38,8 @@ public class GameManager : MonoBehaviour {
 		}
 
 		DontDestroyOnLoad (gameObject);
+
+		Assert.IsNotNull (mainMenu) ;
 	}
 
 	// Use this for initialization
@@ -26,5 +50,21 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	public void PlayerCollided ()
+	{
+		gameOver = true;
+	}
+
+	public void StartGame()
+	{
+		playerActive = true;
+	}
+
+	public void EnterGame()
+	{
+		mainMenu.SetActive (false);
+		gameStarted = true;
 	}
 }

@@ -1,15 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Assertions;
 
 public class Player : MonoBehaviour {
 
 	[SerializeField] private float forceAmount = 50f;
 	[SerializeField] private AudioClip sfxJump;
+	[SerializeField] private AudioClip sfxDeath;
 
 	private Animator anim;
 	private Rigidbody rigidBody;
 	private bool jump = false;
 	private AudioSource audioSource;
+
+	void Awake()
+	{
+		Assert.IsNotNull (sfxJump);
+		Assert.IsNotNull (sfxDeath);
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -41,5 +49,15 @@ public class Player : MonoBehaviour {
 			rigidBody.AddForce(new Vector2(0, forceAmount), ForceMode.Impulse);
 		}
 
+	}
+
+	void OnCollisionEnter (Collision collision) 
+	{
+		if (collision.gameObject.tag == "obstacle")
+		{
+			rigidBody.AddForce(new Vector2(-50,20), ForceMode.Impulse);
+			rigidBody.detectCollisions = false;
+			audioSource.PlayOneShot (sfxDeath);
+		}
 	}
 }

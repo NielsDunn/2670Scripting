@@ -28,8 +28,6 @@ public class Rock : movePlatform
 			yield return null;
 		}
 
-		print ("Reached the target");
-
 		yield return new WaitForSeconds (0.5f);
 
 		Vector3 newTarget = target.y == topPosition.y ? bottomPosition : topPosition;

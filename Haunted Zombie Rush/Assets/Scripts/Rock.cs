@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Rock : MonoBehaviour 
+public class Rock : movePlatform
 {
 
 	[SerializeField] Vector3 topPosition;
@@ -11,6 +11,11 @@ public class Rock : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 		StartCoroutine (Move(bottomPosition));
+	}
+
+	protected override void Update()
+	{
+		base.Update();
 	}
 
 	IEnumerator Move(Vector3 target)

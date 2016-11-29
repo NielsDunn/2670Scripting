@@ -19,6 +19,8 @@ public class Rock : movePlatform
 		{
 			base.Update();
 		}
+
+
 	}
 
 	IEnumerator Move(Vector3 target)

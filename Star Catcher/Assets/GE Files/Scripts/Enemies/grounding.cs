@@ -10,31 +10,16 @@ public class grounding : MonoBehaviour {
 	private Vector3 tempP;
 	public float speed = 1;
 
-	private ScoreKeeper scoreKeeper;
-	public int scoreValue;
-
 	// Use this for initialization
 	void Start () {
 		startPoint = transform.position;
 		cc = GetComponent<CharacterController>();
 
-		//ScoreKeeping Stuff
-		GameObject scoreKeeperObject = GameObject.FindWithTag ("ScoreKeeper");
-        if (scoreKeeperObject != null)
-        {
-        	scoreKeeper = scoreKeeperObject.GetComponent <ScoreKeeper>();
-        }
-        if (scoreKeeper == null)
-        {
-        	Debug.Log ("Cannot find 'ScoreKeeper' Script");
-        }
+
 	}
 
 	void OnTriggerEnter ()
 	{	
-		print ("Minus 50 Points");
-		scoreKeeper.MinusScore (scoreValue);
-		//speed *= -1;
 		transform.position = startPoint;
 
 	}

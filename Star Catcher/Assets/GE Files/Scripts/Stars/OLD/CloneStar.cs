@@ -16,6 +16,7 @@ public class CloneStar : MonoBehaviour {
 		while (canSpawnStars)
 		{
 			i = Random.Range(0, spawnPoints.Length);
+			stars[j].GetComponent<Rigidbody>().Sleep();
 			stars[j].SetActive(true);
 			stars[j].transform.position = spawnPoints[i].position;
 

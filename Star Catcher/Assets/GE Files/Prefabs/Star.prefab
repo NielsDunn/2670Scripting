@@ -37,8 +37,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014100377982}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.66, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20, y: -15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -106,11 +106,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572bf05fd8cbe4988a5d508c429c20ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceTime: 1
+  forceTime: 11
   forceDuration: 0.1
-  forceRange: 5
-  torqueRange: 20
-  scoreValue: 10
+  rigid: {fileID: 0}
+  forceRange: 58.8
+  torqueRange: 12.62
+  scoreValue: 1
   endTime: 2
 --- !u!135 &135000013560932828
 SphereCollider:
@@ -118,7 +119,7 @@ SphereCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014100377982}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8cee344f58023498ea032e3d5df2ff12, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

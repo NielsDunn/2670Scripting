@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class dropArea : MonoBehaviour {
 
+	public List<Ingredient> ingList;
+
 	public bool active = false;
+
+	public int totalCalories;
 
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 	
 	// Update is called once per frame
@@ -15,16 +19,22 @@ public class dropArea : MonoBehaviour {
 	
 	}
 
-	void OnTriggerEnter()
+	void OnTriggerEnter(Collider ing)
 	{
-		active = true;
+		ingList.Add(ing.GetComponent<Ingredient>());
+		//active = true;
 	}
 
 	void OnMouseUp()
 	{
-		if(active == true) 
-		{
-			print("Ingredient Added");
-		}
+//		if(active == true) 
+//		{
+//			
+//		}
+		foreach (Ingredient i in ingList)
+			{
+				totalCalories += i.calories;
+			}
+			print(totalCalories);
 	}
 }

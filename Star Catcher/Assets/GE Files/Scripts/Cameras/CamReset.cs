@@ -11,7 +11,7 @@ public class CamReset : MonoBehaviour {
 
 	public void RestartLevel()
 	{
-		SceneManager.LoadScene(0);
+		SceneManager.LoadScene(3);
 	}
 
 }

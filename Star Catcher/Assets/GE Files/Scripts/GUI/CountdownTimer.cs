@@ -16,7 +16,7 @@ public class CountdownTimer : MonoBehaviour {
      {
          timeLeft -= Time.deltaTime;
 		 timerText.text = timeLeft.ToString("f1");
-         if(timeLeft < 0)
+         if(timeLeft <= 0)
          {
             RestartLevel();
          }
@@ -24,6 +24,6 @@ public class CountdownTimer : MonoBehaviour {
 
 	public void RestartLevel()
 	{
-		SceneManager.LoadScene(0);
+		SceneManager.LoadScene(3);
 	}
 }

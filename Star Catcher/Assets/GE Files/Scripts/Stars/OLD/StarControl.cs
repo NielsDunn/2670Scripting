@@ -17,6 +17,7 @@ public class StarControl : MonoBehaviour {
     void Start()
     {	
     	//anims = GetComponent<Animator>();
+
         rigid = GetComponent<Rigidbody>();
         StartCoroutine(RunRandomForce());
         GameObject scoreKeeperObject = GameObject.FindWithTag ("ScoreKeeper");
@@ -57,16 +58,6 @@ public class StarControl : MonoBehaviour {
         //gameObject.SetActive(false);
         transform.position = new Vector3(-20,-15,0);
 
-    }
-
-    void OnCollisionEnter ()
-    {
-		endTime -= Time.deltaTime;
-		if(endTime < 0)
-         {
-         	print("Star");
-			transform.position = new Vector3(-20,-15,0);
-         }
     }
 
     

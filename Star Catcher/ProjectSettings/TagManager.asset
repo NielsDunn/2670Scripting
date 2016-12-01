@@ -29,8 +29,8 @@ TagManager:
   - Target
   - Seeker
   - Obstacle
-  - 
-  - 
+  - Particle
+  - EnemyParticle
   - 
   - 
   - 

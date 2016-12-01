@@ -110,9 +110,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceTime: 11
-  forceDuration: 0.1
+  forceDuration: 1
   rigid: {fileID: 54000011657567946}
-  forceRange: 58.8
+  forceRange: 100
   torqueRange: 12.62
   scoreValue: 1
   endTime: 2
@@ -189,7 +189,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 18325495
+  randomSeed: 1553150091
   InitialModule:
     serializedVersion: 2
     enabled: 1

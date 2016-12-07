@@ -15,16 +15,19 @@ public class dropArea : MonoBehaviour {
 		//active = true;
 	}
 
-	void OnMouseUp()
+	public void TotalScore()
 	{
-//		if(active == true) 
-//		{
-//			
-//		}
 		foreach (Ingredient i in ingList)
 			{
 				totalCalories += i.calories;
 			}
 			print(totalCalories);
+			ResetScore();
+	}
+
+	 public void ResetScore()
+	{
+		ingList.Clear();
+		totalCalories = 0;
 	}
 }

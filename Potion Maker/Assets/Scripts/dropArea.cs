@@ -9,16 +9,6 @@ public class dropArea : MonoBehaviour {
 
 	public int totalCalories;
 
-	// Use this for initialization
-	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 	void OnTriggerEnter(Collider ing)
 	{
 		ingList.Add(ing.GetComponent<Ingredient>());

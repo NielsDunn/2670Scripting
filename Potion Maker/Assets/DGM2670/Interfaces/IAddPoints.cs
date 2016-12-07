@@ -5,7 +5,7 @@ public interface IAddPoints {
 
 	int points { get; set; }
 
-	int AddPoints();
+
 
 	void OnTriggerEnter();
 }

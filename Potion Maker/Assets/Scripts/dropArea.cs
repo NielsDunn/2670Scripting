@@ -7,7 +7,7 @@ public class dropArea : MonoBehaviour {
 
 	public bool active = false;
 
-	public int totalCalories;
+	public int potionMade;
 
 	void OnTriggerEnter(Collider ing)
 	{
@@ -19,28 +19,54 @@ public class dropArea : MonoBehaviour {
 	{
 		foreach (Ingredient i in ingList)
 			{
-				totalCalories += i.calories;
+				potionMade += i.ingNum;
 			}
-			//print(totalCalories);
 			MessageSwitch();
 			ResetScore();
 	}
 
 	void MessageSwitch()
 	{
-		switch(totalCalories)
+		switch(potionMade)
 		{
-			case 9:
-				print ("9");
+			case 150:
+				print ("Too many slimes!!!! The Cauldron is overflowing with them!!!");
 				break;
-			case 8:
-				print ("8");
+			case 120:
+				print ("You made a Drowning Swamp Potion! Don't follow the lights....");
 				break;
-			case 7:
-				print ("7");
+			case 101:
+				print ("You made a Warm Sea Potion! Surf's up dude!");
+				break;
+			case 100:
+				print ("The two Slimes just join together to form a Big Blue Slime. It jiggles.");
+				break;
+			case 90:
+				print ("You made a Wild Growth Potion! Hope you brought a Machete!");
+				break;
+			case 71:
+				print ("You made a Panacea! This will cure all wounds! So much more than a hard-to-pronounce name!");
+				break;
+			case 52:
+				print ("You made a Boiling Water Potion! Use it to cook food or scald your enemies! Or both!");
+				break;
+			case 51:
+				print ("The Fire Berry floats in the Slime. It looks like a bad Jello Mold.");
+				break;
+			case 50:
+				print ("That's just a Blue Slime. Jiggly...");
+				break;
+			case 41:
+				print ("You made a Wildfire Potion! Set the hills ablaze! Watch out for self-righteous bears in hats though. ");
 				break;
 			case 22:
 				print ("You made a Fire Storm Potion! Make it rain....fire.");
+				break;
+			case 21:
+				print ("You made a Briar Thorn Potion! Every rose has it's thorns!!! And these thorns are on fire!");
+				break;
+			case 20:
+				print ("The two Mandragoras kiss. Eeew.");
 				break;
 			case 12:
 				print ("You made a Fire Potion! It burns!");
@@ -69,6 +95,6 @@ public class dropArea : MonoBehaviour {
 	public void ResetScore()
 	{
 		ingList.Clear();
-		totalCalories = 0;
+		potionMade = 0;
 	}
 }

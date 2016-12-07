@@ -3,6 +3,6 @@ using System.Collections;
 
 public class Ingredient : MonoBehaviour {
 
-	public int calories = 10;
+	public int ingNum = 10;
 
 }

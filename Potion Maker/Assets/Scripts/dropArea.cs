@@ -39,26 +39,29 @@ public class dropArea : MonoBehaviour {
 			case 7:
 				print ("7");
 				break;
-			case 6:
-				print ("6");
+			case 22:
+				print ("You made a Fire Storm Potion! Make it rain....fire.");
 				break;
-			case 5:
-				print ("5");
+			case 12:
+				print ("You made a Fire Potion! It burns!");
 				break;
-			case 4:
-				print ("4");
+			case 11:
+				print ("It's a Fire Berry and a Mandragora. That's not a potion. ...The Mandragora tries to eat the Fire Berry.");
+				break;
+			case 10:
+				print ("That's just a Mandragora. It winks.");
 				break;
 			case 3:
-				print ("3");
+				print ("You made... THREE Fire Berries!!! ...Why not try adding some variety?");
 				break;
 			case 2:
-				print ("2");
+				print ("You made... two Fire Berries. Keep trying.");
 				break;
 			case 1:
-				print ("1");
+				print ("You made... a Fire Berry. What did you expect? You only added one ingredient!");
 				break;
 			default:
-				print ("error");
+				print ("It's an unintelligible mess. Try a different combination of 3 ingredients.");
 				break;
 		}
 	}

@@ -26,12 +26,6 @@ public class dropArea : MonoBehaviour {
 			ResetScore();
 	}
 
-	 public void ResetScore()
-	{
-		ingList.Clear();
-		totalCalories = 0;
-	}
-
 	void MessageSwitch()
 	{
 		switch(totalCalories)
@@ -67,5 +61,11 @@ public class dropArea : MonoBehaviour {
 				print ("error");
 				break;
 		}
+	}
+
+	public void ResetScore()
+	{
+		ingList.Clear();
+		totalCalories = 0;
 	}
 }

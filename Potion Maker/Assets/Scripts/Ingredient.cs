@@ -5,13 +5,4 @@ public class Ingredient : MonoBehaviour {
 
 	public int calories = 10;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

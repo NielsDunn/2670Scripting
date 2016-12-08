@@ -9,6 +9,8 @@ public class dropArea : MonoBehaviour {
 
 	public int potionMade;
 
+	public GUIText messageText;
+
 	void OnTriggerEnter(Collider ing)
 	{
 		ingList.Add(ing.GetComponent<Ingredient>());
@@ -30,7 +32,7 @@ public class dropArea : MonoBehaviour {
 		switch(potionMade)
 		{
 			case 150:
-				print ("Too many slimes!!!! The Cauldron is overflowing with them!!!");
+				messageText.text = "Too many slimes!!!! The Cauldron is overflowing with them!!!";
 				break;
 			case 120:
 				print ("You made a Drowning Swamp Potion! Don't follow the lights....");
@@ -96,5 +98,6 @@ public class dropArea : MonoBehaviour {
 	{
 		ingList.Clear();
 		potionMade = 0;
+		messageText.text = "Let's make a Potion!";
 	}
 }

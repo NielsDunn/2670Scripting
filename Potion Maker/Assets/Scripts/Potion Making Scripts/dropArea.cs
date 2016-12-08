@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class dropArea : MonoBehaviour {
 
@@ -9,7 +10,7 @@ public class dropArea : MonoBehaviour {
 
 	public int potionMade;
 
-	public GUIText messageText;
+	public Text messageText;
 
 	void OnTriggerEnter(Collider ing)
 	{
@@ -33,8 +34,8 @@ public class dropArea : MonoBehaviour {
 		switch(potionMade)
 		{
 			case 150:
-				messageText.text = "Too many Slimes!";
-				print ("Too many Slimes!");
+				messageText.text = "Too many Slimes! The cauldron overflows with gooey bodies!";
+				print ("Too many Slimes! The cauldron overflows with gooey bodies!");
 				break;
 			case 120:
 				messageText.text = "You made a Drowning Swamp Potion! Don't follow the lights.";
@@ -56,6 +57,10 @@ public class dropArea : MonoBehaviour {
 				messageText.text = "You made a Panacea! This will cure all wounds! So much more than a hard-to-pronounce name!";
 				print ("You made a Panacea! This will cure all wounds! So much more than a hard-to-pronounce name!");
 				break;
+			case 60:
+				messageText.text = "The three Mandragoras start to dance. Their music is really loud...";
+				print ("The three Mandragoras start to dance. Their music is really loud...");
+				break;
 			case 52:
 				messageText.text = "You made a Boiling Water Potion! Use it to cook food or scald your enemies! Or both!";
 				print ("You made a Boiling Water Potion! Use it to cook food or scald your enemies! Or both!");
@@ -65,34 +70,25 @@ public class dropArea : MonoBehaviour {
 				print ("The Fire Berry floats in the Slime. It looks like a bad Jello Mold.");
 				break;
 			case 50:
-				messageText.text = "That's just a Blue Slime. Jiggly...";
-				print ("That's just a Blue Slime. Jiggly...");
+				messageText.text = "That's just a Blue Slime. Jiggly...";print ("That's just a Blue Slime. Jiggly...");
 				break;
 			case 41:
-				messageText.text = "You made a Wildfire Potion! Set the hills ablaze! Watch out for self-righteous bears in hats though.";
-				print ("You made a Wildfire Potion! Set the hills ablaze! Watch out for self-righteous bears in hats though.");
+				messageText.text = "You made a Briar Thorn Potion! Every rose has it's thorns!!! And these thorns are on fire!";
+				print ("You made a Briar Thorn Potion! Every rose has it's thorns!!! And these thorns are on fire!");
+				break;	
+			case 40:
+				messageText.text = "The two Mandragoras high five. Just a couple of bros.";
+				print ("The two Mandragoras high five. Just a couple of bros.");
 				break;
 			case 22:
 				messageText.text = "You made a Fire Storm Potion! Make it rain....fire.";
 				print ("You made a Fire Storm Potion! Make it rain....fire.");
 				break;
 			case 21:
-				messageText.text = "You made a Briar Thorn Potion! Every rose has it's thorns!!! And these thorns are on fire!";
-				print ("You made a Briar Thorn Potion! Every rose has it's thorns!!! And these thorns are on fire!");
-				break;
-			case 20:
-				messageText.text = "The two Mandragoras kiss. Eeew.";
-				print ("The two Mandragoras kiss. Eeew.");
-				break;
-			case 12:
-				messageText.text = "You made a Fire Potion! It burns!";
-				print ("You made a Fire Potion! It burns!");
-				break;
-			case 11:
 				messageText.text = "It's a Fire Berry and a Mandragora. That's not a potion. ...The Mandragora tries to eat the Fire Berry.";
 				print ("It's a Fire Berry and a Mandragora. That's not a potion. ...The Mandragora tries to eat the Fire Berry.");
 				break;
-			case 10:
+			case 20:
 				messageText.text = "That's just a Mandragora. It winks.";
 				print ("That's just a Mandragora. It winks.");
 				break;

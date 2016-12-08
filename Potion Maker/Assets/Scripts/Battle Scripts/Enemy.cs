@@ -4,17 +4,16 @@ using System.Collections;
 public class Enemy : MonoBehaviour, IDamageable {
 
 	public int health = 100;
-
 	public int respawnTime = 5;
 
-	public float smoothing = 10f;
-    public Transform targetLeft;
-    public Transform targetRight;
+	[SerializeField] Vector3 leftPosition;
+	[SerializeField] Vector3 rightPosition;
+	[SerializeField] float speed;
 
 	// Use this for initialization
 	void Start () {
 
-		StartCoroutine(moveLeft(targetLeft));
+		StartCoroutine (Move(rightPosition));
 
 	}
 
@@ -25,39 +24,25 @@ public class Enemy : MonoBehaviour, IDamageable {
 
 	public void Respawn ()
 	{
-		throw new System.NotImplementedException ();
+
 	}
 
-	IEnumerator moveLeft (Transform targetLeft)
-    {
-        while(Vector3.Distance(transform.position, targetLeft.position) > 0.05f)
-        {
-            transform.position = Vector3.Lerp(transform.position, targetLeft.position, smoothing * Time.deltaTime);
-            
-            yield return null;
-        }
-        
-        print("Reached the target.");
-        
-        yield return new WaitForSeconds(1f);
-        
-        StartCoroutine(moveRight(targetRight));
-    }
+	IEnumerator Move(Vector3 target)
+	{
+		while (Mathf.Abs((target - transform.localPosition).x) > 0.20f) 
+		{
+			Vector3 direction = target.x == leftPosition.x ? Vector3.left : Vector3.right;
+			transform.localPosition += direction * Time.deltaTime * speed;
 
-	IEnumerator moveRight (Transform targetRight)
-    {
-        while(Vector3.Distance(transform.position, targetRight.position) > 0.05f)
-        {
-            transform.position = Vector3.Lerp(transform.position, targetRight.position, smoothing * Time.deltaTime);
-            
-            yield return null;
-        }
-        
-        print("Reached the target.");
-        
-        yield return new WaitForSeconds(1f);
-        
-        StartCoroutine(moveLeft(targetLeft));
-    }
+			yield return null;
+		}
+
+		yield return new WaitForSeconds (0.5f);
+
+		Vector3 newTarget = target.x == leftPosition.x ? rightPosition : leftPosition;
+
+		StartCoroutine(Move(newTarget));
+	}
+
 
 }

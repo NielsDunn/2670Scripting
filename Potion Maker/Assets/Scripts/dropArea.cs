@@ -37,22 +37,27 @@ public class dropArea : MonoBehaviour {
 				print ("Too many Slimes!");
 				break;
 			case 120:
-			messageText.text = "You made a Drowning Swamp Potion! Don't follow the lights.";
+				messageText.text = "You made a Drowning Swamp Potion! Don't follow the lights.";
 				print ("You made a Drowning Swamp Potion! Don't follow the lights....");
 				break;
 			case 101:
+				messageText.text = "You made a Warm Sea Potion! Surf's up dude!";
 				print ("You made a Warm Sea Potion! Surf's up dude!");
 				break;
 			case 100:
+				messageText.text = "The two Slimes just join together to form a Big Blue Slime. It jiggles.";
 				print ("The two Slimes just join together to form a Big Blue Slime. It jiggles.");
 				break;
 			case 90:
+				messageText.text = "You made a Wild Growth Potion! Hope you brought a Machete!";
 				print ("You made a Wild Growth Potion! Hope you brought a Machete!");
 				break;
 			case 71:
+				messageText.text = "You made a Panacea! This will cure all wounds! So much more than a hard-to-pronounce name!";
 				print ("You made a Panacea! This will cure all wounds! So much more than a hard-to-pronounce name!");
 				break;
 			case 52:
+				messageText.text = "You made a Boiling Water Potion! Use it to cook food or scald your enemies! Or both!";
 				print ("You made a Boiling Water Potion! Use it to cook food or scald your enemies! Or both!");
 				break;
 			case 51:

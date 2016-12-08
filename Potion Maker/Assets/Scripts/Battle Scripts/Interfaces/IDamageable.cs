@@ -3,7 +3,7 @@ using System.Collections;
 
 public interface IDamageable {
 
-	void Health();
+	void damageTaken();
 
 	void Respawn();
 

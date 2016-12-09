@@ -3,23 +3,19 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour, IDamageable {
 
-	public int health = 100;
+	public int health = 5;
 	public int respawnTime = 5;
 
-	[SerializeField] Vector3 leftPosition;
-	[SerializeField] Vector3 rightPosition;
-	[SerializeField] float speed;
+	public Vector3 leftPosition;
+	public Vector3 rightPosition;
+	public float speed;
+
 
 	// Use this for initialization
 	void Start () {
 
 		StartCoroutine (Move(rightPosition));
 
-	}
-
-	public void damageTaken ()
-	{
-		
 	}
 
 	public void Respawn ()
@@ -42,6 +38,24 @@ public class Enemy : MonoBehaviour, IDamageable {
 		Vector3 newTarget = target.x == leftPosition.x ? rightPosition : leftPosition;
 
 		StartCoroutine(Move(newTarget));
+	}
+
+	void OnTriggerEnter()
+	{
+		health--;
+	}
+
+	public void damageTaken ()
+	{
+		switch (health)
+		{
+			case 4:
+				print ("Ow.");
+				break;
+			default:
+				print ("Haven't been hit yet");
+				break;
+		}
 	}
 
 

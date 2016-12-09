@@ -5,13 +5,14 @@ public class Potion : MonoBehaviour, IReuseable {
 	
 	public float upwardForce = 3f;
 	public float forwardForce = 1f;
-	private Transform startPosition;
+	private Vector3 spawnPosition;
 
 	private Rigidbody rigidBody;
 
 	// Use this for initialization
 	void Start () {
 		rigidBody = GetComponent<Rigidbody> ();
+		spawnPosition = transform.position;
 	}
 
 	void OnMouseUp()
@@ -26,6 +27,7 @@ public class Potion : MonoBehaviour, IReuseable {
 
 	void OnTriggerEnter ()
 	{
-
+		transform.position = spawnPosition;
+		GetComponent<Rigidbody>().Sleep();
 	}
 }

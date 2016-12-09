@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour, IDamageable {
 
-	public int health = 5;
+	public static int health = 5;
 	public int respawnTime = 5;
 
 	public Vector3 leftPosition;
@@ -43,6 +43,7 @@ public class Enemy : MonoBehaviour, IDamageable {
 	void OnTriggerEnter()
 	{
 		health--;
+		damageTaken();
 	}
 
 	public void damageTaken ()
@@ -50,7 +51,24 @@ public class Enemy : MonoBehaviour, IDamageable {
 		switch (health)
 		{
 			case 4:
+				speed++;
 				print ("Ow.");
+				break;
+			case 3:
+				speed++;
+				print ("You're hurting me.");
+				break;
+			case 2:
+				speed++;
+				print ("I'm dying.");
+				break;
+			case 1:
+				speed++;
+				print ("I'm almost dead.");
+				break;
+			case 0:
+				speed = speed - 9;
+				print ("I'm dead.");
 				break;
 			default:
 				print ("Haven't been hit yet");

@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour, IDamageable {
 	void Start () {
 
 		StartCoroutine (Move(rightPosition));
+		damageTaken();
 
 	}
 

@@ -27,6 +27,10 @@ public class dropArea : MonoBehaviour {
 			MessageSwitch();
 			ResetScore();
 
+			if (active == true)
+			{
+				print ("I'm active.");
+			}
 	}
 
 	void MessageSwitch()

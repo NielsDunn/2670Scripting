@@ -15,7 +15,13 @@ public class dropArea : MonoBehaviour {
 	void OnTriggerEnter(Collider ing)
 	{
 		ingList.Add(ing.GetComponent<Ingredient>());
-		//active = true;
+
+		active = true;
+
+		if (active == true)
+			{
+				print ("I'm active.");
+			}
 	}
 
 	public void TotalScore()
@@ -26,11 +32,6 @@ public class dropArea : MonoBehaviour {
 			}
 			MessageSwitch();
 			ResetScore();
-
-			if (active == true)
-			{
-				print ("I'm active.");
-			}
 	}
 
 	void MessageSwitch()

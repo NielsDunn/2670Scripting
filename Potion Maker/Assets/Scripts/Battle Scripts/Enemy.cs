@@ -1,10 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Enemy : MonoBehaviour, IDamageable {
 
+	private bool canSpawn = true;
+
 	public static int health = 5;
 	public int respawnTime = 5;
+
+	public int maxEnemyNum = 3;
+
 
 	public Vector3 leftPosition;
 	public Vector3 rightPosition;
@@ -14,13 +20,43 @@ public class Enemy : MonoBehaviour, IDamageable {
 	// Use this for initialization
 	void Start () {
 
+		string[] countdown = new string[4];
+
+		countdown[0] = "Ready or not";
+		countdown[1] = "Here";
+		countdown[2] = "We";
+		countdown[3] = "Go!";
+
+		foreach(string number in countdown)
+		{
+			print(number);
+		}
+
 		StartCoroutine (Move(rightPosition));
 		damageTaken();
 
+		Respawn();
 	}
 
-	public void Respawn ()
+	public void Respawn()
 	{
+		for (int e = 0; e < maxEnemyNum;)
+		{
+			e++;
+
+			print("There are " + e + " enemies.");
+		}
+
+		while (canSpawn)
+		{
+			print ("Let's spawn an enemy!");
+			canSpawn = false;
+		}
+
+		do 
+		{
+			print ("We spawned an enemy!");
+		} while(canSpawn == true);
 
 	}
 
@@ -41,11 +77,11 @@ public class Enemy : MonoBehaviour, IDamageable {
 		StartCoroutine(Move(newTarget));
 	}
 
-	void OnTriggerEnter()
+	void OnTriggerEnter(Collider en)
 	{
 		health--;
 		damageTaken();
-	}
+		}
 
 	public void damageTaken ()
 	{

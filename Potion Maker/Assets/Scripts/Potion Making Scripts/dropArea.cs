@@ -5,12 +5,14 @@ using UnityEngine.UI;
 public class dropArea : MonoBehaviour {
 
 	public List<Ingredient> ingList;
-
 	public bool active = false;
-
 	public int potionMade;
-
 	public Text messageText;
+
+	void Start ()
+	{
+		
+	}
 
 	void OnTriggerEnter(Collider ing)
 	{
@@ -121,4 +123,5 @@ public class dropArea : MonoBehaviour {
 		ingList.Clear();
 		potionMade = 0;	
 	}
+
 }

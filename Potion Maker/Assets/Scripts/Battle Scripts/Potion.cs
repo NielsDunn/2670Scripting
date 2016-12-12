@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Potion : MonoBehaviour, IReuseable {
+
+	public string[] potionTypes;
 
 	public int potionNum = 5;
 	
@@ -13,6 +16,13 @@ public class Potion : MonoBehaviour, IReuseable {
 
 	// Use this for initialization
 	void Start () {
+
+		potionTypes = new string[3]; 
+
+		potionTypes[0] = "Fire Potion";
+		potionTypes[1] = "Ice Potion";
+		potionTypes[2] = "Lightning Potion";
+		
 		rigidBody = GetComponent<Rigidbody> ();
 		spawnPosition = transform.position;
 		PotionCount();
@@ -38,9 +48,6 @@ public class Potion : MonoBehaviour, IReuseable {
 
 	void PotionCount()
 	{
-		for (int p = 0; p < potionNum; p++)
-		{
-			print ("Potions in pool: " + p);
-		}
+		print("You threw a " + potionTypes[Random.Range (0,2)] + "!");
 	}
 }

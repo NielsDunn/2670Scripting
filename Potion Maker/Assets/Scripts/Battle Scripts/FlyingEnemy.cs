@@ -25,4 +25,10 @@ public class FlyingEnemy : Enemy {
 		StartCoroutine(Move(newTarget));
 	}
 
+	void OnTriggerEnter()
+	{
+		print ("Wow you actually hit that? Nice job!");
+		transform.position = new Vector3 (0, -5, 0);
+	}
+
 }

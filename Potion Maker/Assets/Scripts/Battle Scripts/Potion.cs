@@ -6,6 +6,8 @@ public class Potion : MonoBehaviour, IReuseable {
 
 	public string[] potionTypes;
 
+	public int potionThrown = 5;
+
 	public int potionNum = 5;
 	
 	public float upwardForce = 3f;
@@ -60,6 +62,11 @@ public class Potion : MonoBehaviour, IReuseable {
 		
 		transform.position = spawnPosition;
 		GetComponent<Rigidbody>().Sleep();
+
+		for (int pt = 0; pt < potionThrown; pt++)
+		{
+			print("There have been " + pt + " potions thrown!");
+		}
 	}
 
 	void PotionType()

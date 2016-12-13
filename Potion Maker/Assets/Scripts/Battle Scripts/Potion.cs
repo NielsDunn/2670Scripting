@@ -64,6 +64,6 @@ public class Potion : MonoBehaviour, IReuseable {
 
 	void PotionType()
 	{
-		print("You threw a " + potionTypes[Random.Range (0,2)] + "!");
+		print("You threw a " + potionTypes[Random.Range(0,3)] + "!");
 	}
 }

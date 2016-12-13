@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 public class Enemy : MonoBehaviour, IDamageable {
 
+	public delegate void DeathAction();
+	public static event DeathAction OnHealthZero;
+
 	private bool canSpawn = true;
 
 	public static int health = 5;
@@ -110,6 +113,15 @@ public class Enemy : MonoBehaviour, IDamageable {
 			default:
 				print ("Haven't been hit yet");
 				break;
+		}
+	}
+
+	void OnGUI()
+	{
+		if(health ==0)
+		{
+			if(OnHealthZero !=null)
+				OnHealthZero();
 		}
 	}
 

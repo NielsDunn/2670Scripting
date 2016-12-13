@@ -17,6 +17,21 @@ public class Potion : MonoBehaviour, IReuseable {
 	// Use this for initialization
 	void Start () {
 
+		List<PotionTypes> potiontypes = new List<PotionTypes>();
+
+		potiontypes.Add (new PotionTypes ("Fire Potion", 100, 5));
+		potiontypes.Add (new PotionTypes ("Ice Potion", 200, 5));
+		potiontypes.Add (new PotionTypes ("Lightning Potion", 300, 5));
+
+		potiontypes.Sort();
+
+		foreach (PotionTypes potion in potiontypes)
+		{
+			print (potion.potionName + " " + potion.strength + " " + potion.numCharge + " charges left.");
+		}
+
+		potiontypes.Clear();
+
 		potionTypes = new string[3]; 
 
 		potionTypes[0] = "Fire Potion";
@@ -25,14 +40,13 @@ public class Potion : MonoBehaviour, IReuseable {
 		
 		rigidBody = GetComponent<Rigidbody> ();
 		spawnPosition = transform.position;
-		PotionCount();
 	}
 
 	void OnMouseUp()
 	{
 		rigidBody.AddForce(new Vector3(0, upwardForce, forwardForce), ForceMode.Impulse);
 		potionNum--;
-		PotionCount();
+
 	}
 
 	public void Refill ()
@@ -42,11 +56,13 @@ public class Potion : MonoBehaviour, IReuseable {
 
 	void OnTriggerEnter ()
 	{
+		PotionType();
+		
 		transform.position = spawnPosition;
 		GetComponent<Rigidbody>().Sleep();
 	}
 
-	void PotionCount()
+	void PotionType()
 	{
 		print("You threw a " + potionTypes[Random.Range (0,2)] + "!");
 	}

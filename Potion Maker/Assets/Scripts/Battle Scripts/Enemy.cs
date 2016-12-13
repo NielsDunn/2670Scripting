@@ -39,6 +39,8 @@ public class Enemy : MonoBehaviour, IDamageable {
 		damageTaken();
 
 		Respawn();
+
+		myFunction(15);
 	}
 
 	public void Respawn()
@@ -125,5 +127,17 @@ public class Enemy : MonoBehaviour, IDamageable {
 		}
 	}
 
+	static void myFunction(int x)
+	{
+		int Answer;
 
-}
+		Answer = 5 * x;
+
+		print ("My answer is " + Answer);
+	}
+
+	public int MultiplybyFive(int x) {
+		return x * 5;
+	}
+ }
+

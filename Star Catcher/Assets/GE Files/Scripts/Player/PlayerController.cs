@@ -16,8 +16,13 @@ public class PlayerController : MonoBehaviour {
     //2D barrier stuff
 	public float sideForce = .5f;
 
+	//Animation stuff
+	Animator anim;
+	bool isrunning = false;
+
     void Start ()
     {
+    	anim = GetComponentInChildren<Animator>();
 		myCC = GetComponent<CharacterController>();	
     }
 
@@ -30,6 +35,48 @@ public class PlayerController : MonoBehaviour {
             jumpCount++;
             //adding the jumpSpeed var to the tempPos var
             tempPos.y = jumpSpeed;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+			anim.Play("Jump");
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow) && Input.GetKeyDown(KeyCode.Space))
+        {
+        	isrunning = false;
+        	anim.Play("Jump");
+        }
+
+		if (Input.GetKeyDown(KeyCode.LeftArrow) && Input.GetKeyDown(KeyCode.Space))
+        {
+        	isrunning = false;
+        	anim.Play("Jump");
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+        	isrunning = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+        	isrunning = false;
+        }
+
+		if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+        	isrunning = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+        	isrunning = false;
+        }
+
+        if (isrunning == true)
+        {
+        	anim.Play("Run");
         }
 
         //test if the character controller is grounded

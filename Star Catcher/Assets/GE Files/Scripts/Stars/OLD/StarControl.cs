@@ -14,9 +14,17 @@ public class StarControl : MonoBehaviour {
     public int scoreValue;
     private ScoreKeeper scoreKeeper;
 
+    //Audio Stuff
+    [SerializeField] private AudioClip sfxTink;
+    [SerializeField] private AudioClip sfxCollect;
+
+    private AudioSource audioSource;
+
     void Start()
     {	
     	//anims = GetComponent<Animator>();
+
+    	audioSource = GetComponent<AudioSource>();
 
         rigid = GetComponent<Rigidbody>();
         StartCoroutine(RunRandomForce());
@@ -57,8 +65,14 @@ public class StarControl : MonoBehaviour {
 		scoreKeeper.AddScore (scoreValue);
         //gameObject.SetActive(false);
         transform.position = new Vector3(-20,-15,0);
+        audioSource.PlayOneShot (sfxCollect);
 
     }
+
+    /** void OnCollisionEnter(Collision col)
+    {
+    	audioSource.PlayOneShot(sfxTink);
+    }**/
 
     
 }

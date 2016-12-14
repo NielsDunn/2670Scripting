@@ -42,24 +42,10 @@ public class PlayerController : MonoBehaviour {
 			anim.Play("Jump");
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) && Input.GetKeyDown(KeyCode.Space))
-        {
-        	isrunning = false;
-        	anim.Play("Jump");
-        }
-
-		if (Input.GetKeyDown(KeyCode.LeftArrow) && Input.GetKeyDown(KeyCode.Space))
-        {
-        	isrunning = false;
-        	anim.Play("Jump");
-        }
-
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
         	isrunning = true;
-        }
-
-        if (Input.GetKeyUp(KeyCode.RightArrow))
+        } else if (Input.GetKeyUp(KeyCode.RightArrow))
         {
         	isrunning = false;
         }
@@ -67,9 +53,7 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
         	isrunning = true;
-        }
-
-        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        } else if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
         	isrunning = false;
         }

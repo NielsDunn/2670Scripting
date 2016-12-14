@@ -6,8 +6,14 @@ public class PointDeductor : MonoBehaviour {
 	private ScoreKeeper scoreKeeper;
 	public int scoreValue;
 
+	[SerializeField] private AudioClip sfxShatter;
+
+    private AudioSource audioSource;
+
 	void Start()
 	{
+		audioSource = GetComponent<AudioSource>();
+		
 		//ScoreKeeping Stuff
 		GameObject scoreKeeperObject = GameObject.FindWithTag ("ScoreKeeper");
         if (scoreKeeperObject != null)
@@ -24,6 +30,6 @@ public class PointDeductor : MonoBehaviour {
 	{	
 		print ("Minus 50 Points");
 		scoreKeeper.MinusScore (scoreValue);
-		//speed *= -1;
+		audioSource.PlayOneShot (sfxShatter);
 	}
 }

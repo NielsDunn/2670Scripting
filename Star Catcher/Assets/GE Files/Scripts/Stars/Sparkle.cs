@@ -17,7 +17,6 @@ public class Sparkle : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col)
 	{
-		print ("Hit Ground");
 		_psystem.Play();
 	}
 

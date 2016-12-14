@@ -19,7 +19,7 @@ public class grounding : MonoBehaviour {
 	}
 
 	void OnTriggerEnter ()
-	{	
+	{
 		transform.position = startPoint;
 
 	}

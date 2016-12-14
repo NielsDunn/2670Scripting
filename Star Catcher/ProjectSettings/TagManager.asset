@@ -31,8 +31,8 @@ TagManager:
   - Obstacle
   - Particle
   - EnemyParticle
-  - 
-  - 
+  - HowlPlayer
+  - HowlTrigger
   - 
   - 
   - 

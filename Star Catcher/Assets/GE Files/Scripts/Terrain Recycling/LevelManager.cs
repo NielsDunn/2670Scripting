@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour {
 	{
 		float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1);
 		yield return new WaitForSeconds (2.6f);
-		Application.LoadLevel(Application.loadedLevel +1);
+		Application.LoadLevel(2);
 
 	}
 

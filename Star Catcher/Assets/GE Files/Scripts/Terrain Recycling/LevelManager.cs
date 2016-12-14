@@ -11,14 +11,12 @@ public class LevelManager : MonoBehaviour {
 
 	public void QuitRequest()
 	{
-		Debug.Log ("Quit requested");
-		Application.Quit ();
+		StartCoroutine("QuitWait");
 	}
 
 	public void MainMenu()
 	{
-		Debug.Log ("Go to Main Menu");
-		Application.LoadLevel(Application.loadedLevel - 2);
+		StartCoroutine("MainMenuRequest");
 	}
 
 	IEnumerator Wait()
@@ -28,5 +26,21 @@ public class LevelManager : MonoBehaviour {
 		Application.LoadLevel(Application.loadedLevel +1);
 
 	}
+
+	IEnumerator QuitWait()
+	{
+		float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1);
+		yield return new WaitForSeconds (2.6f);
+		Application.Quit ();
+
+	}
+
+	IEnumerator MainMenuRequest()
+	{
+		float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1);
+		yield return new WaitForSeconds (2.6f);
+		Application.LoadLevel(Application.loadedLevel - 2);
+	}
+
 
 }

@@ -29,12 +29,13 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //waiting for input and compparing jumpcount
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < jumpCountMax-1)
+        if (Input.GetKeyDown(KeyCode.Space) && (jumpCount < jumpCountMax -1))
         {
             //incrementing the jumpcount by 1
             jumpCount++;
             //adding the jumpSpeed var to the tempPos var
             tempPos.y = jumpSpeed;
+            anim.Play ("Jump");
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -80,9 +81,9 @@ public class PlayerController : MonoBehaviour {
 		tempPos.y -= gravity*Time.deltaTime;
 		tempPos.z = sideForce;
 
-		if(myCC.isGrounded){
+		/**if(myCC.isGrounded){
 			tempPos.y = 0;
-		}
+		}**/
 		myCC.Move(tempPos);
 	}
 

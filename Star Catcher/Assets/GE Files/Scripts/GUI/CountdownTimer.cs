@@ -18,6 +18,7 @@ public class CountdownTimer : MonoBehaviour {
 		 timerText.text = timeLeft.ToString("f1");
          if(timeLeft <= 0)
          {
+         	timeLeft = 0;
 			StartCoroutine("GameOver");
          }
      }

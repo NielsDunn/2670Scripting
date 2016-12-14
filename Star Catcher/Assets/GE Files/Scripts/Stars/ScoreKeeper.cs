@@ -26,6 +26,10 @@ public class ScoreKeeper : MonoBehaviour {
 	
 	void UpdateScore ()
     {
+    	if (score <= 0)
+    	{
+    		score = 0;
+    	}
     	scoreText.text = "Stars: " + score;
     }
 }

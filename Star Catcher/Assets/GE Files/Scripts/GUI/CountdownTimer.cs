@@ -18,12 +18,15 @@ public class CountdownTimer : MonoBehaviour {
 		 timerText.text = timeLeft.ToString("f1");
          if(timeLeft <= 0)
          {
-            RestartLevel();
+			StartCoroutine("GameOver");
          }
      }
 
-	public void RestartLevel()
+	IEnumerator GameOver()
 	{
-		SceneManager.LoadScene(3);
+		float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1);
+		yield return new WaitForSeconds (2.0f);
+		Application.LoadLevel(3);
+
 	}
 }

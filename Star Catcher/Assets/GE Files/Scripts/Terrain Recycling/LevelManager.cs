@@ -6,8 +6,7 @@ public class LevelManager : MonoBehaviour {
 
 	public void LoadLevel()
 	{
-		Debug.Log ("New Level load: " + name);
-		SceneManager.LoadScene(2);
+		StartCoroutine("Wait");
 	}
 
 	public void QuitRequest()
@@ -19,7 +18,15 @@ public class LevelManager : MonoBehaviour {
 	public void MainMenu()
 	{
 		Debug.Log ("Go to Main Menu");
-		SceneManager.LoadScene(1);
+		Application.LoadLevel(Application.loadedLevel - 2);
+	}
+
+	IEnumerator Wait()
+	{
+		float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1);
+		yield return new WaitForSeconds (2.6f);
+		Application.LoadLevel(Application.loadedLevel +1);
+
 	}
 
 }

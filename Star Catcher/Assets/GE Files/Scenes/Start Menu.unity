@@ -101,6 +101,7 @@ GameObject:
   - 222: {fileID: 63489125}
   - 114: {fileID: 63489124}
   - 114: {fileID: 63489123}
+  - 114: {fileID: 63489126}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -217,6 +218,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 63489121}
+--- !u!114 &63489126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 63489121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3595f553dedce4485ab1457cc2da1bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxClick: {fileID: 8300000, guid: 07e95ddea06ca492794da791cff0d859, type: 3}
 --- !u!1 &66598622
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +305,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1001 &587047640
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013400842516, guid: 6e1162df1534d435ea9d0baa174a3c15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 398.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013400842516, guid: 6e1162df1534d435ea9d0baa174a3c15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 179
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013400842516, guid: 6e1162df1534d435ea9d0baa174a3c15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013400842516, guid: 6e1162df1534d435ea9d0baa174a3c15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013400842516, guid: 6e1162df1534d435ea9d0baa174a3c15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013400842516, guid: 6e1162df1534d435ea9d0baa174a3c15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013400842516, guid: 6e1162df1534d435ea9d0baa174a3c15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013400842516, guid: 6e1162df1534d435ea9d0baa174a3c15, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6e1162df1534d435ea9d0baa174a3c15, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &720264909
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,6 +358,7 @@ GameObject:
   - 222: {fileID: 720264912}
   - 114: {fileID: 720264911}
   - 114: {fileID: 720264913}
+  - 114: {fileID: 720264914}
   m_Layer: 5
   m_Name: Start Button
   m_TagString: Untagged
@@ -419,6 +475,18 @@ MonoBehaviour:
         m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &720264914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 720264909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3595f553dedce4485ab1457cc2da1bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxClick: {fileID: 8300000, guid: 07e95ddea06ca492794da791cff0d859, type: 3}
 --- !u!1 &822728645
 GameObject:
   m_ObjectHideFlags: 0

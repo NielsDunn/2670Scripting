@@ -6,12 +6,15 @@ public class CamReset : MonoBehaviour {
 
 	void OnTriggerEnter()
 	{
-		RestartLevel();
+		StartCoroutine("GameOver");
 	}
 
-	public void RestartLevel()
+	IEnumerator GameOver()
 	{
-		SceneManager.LoadScene(3);
+		float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1);
+		yield return new WaitForSeconds (1.0f);
+		Application.LoadLevel(3);
+
 	}
 
 }

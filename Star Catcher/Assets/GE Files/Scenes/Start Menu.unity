@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3595f553dedce4485ab1457cc2da1bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxClick: {fileID: 8300000, guid: 07e95ddea06ca492794da791cff0d859, type: 3}
+  sfxClick: {fileID: 8300000, guid: 842e6c9ee12bb4cac815029901d416b0, type: 3}
 --- !u!1 &66598622
 GameObject:
   m_ObjectHideFlags: 0

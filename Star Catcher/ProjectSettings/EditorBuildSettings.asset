@@ -10,6 +10,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GE Files/Scenes/Start Menu.unity
   - enabled: 1
-    path: Assets/GE Files/Scenes/Prototype Ten.unity
+    path: Assets/GE Files/Scenes/Prototype Final.unity
   - enabled: 1
     path: Assets/GE Files/Scenes/Game Over.unity

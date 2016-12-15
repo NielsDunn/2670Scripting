@@ -187,8 +187,8 @@ MonoBehaviour:
   forceTime: 11
   forceDuration: 1
   rigid: {fileID: 54000012762150524}
-  forceRange: 100
-  torqueRange: 12.62
+  forceRange: 600
+  torqueRange: 300
   scoreValue: 1
   sfxTink: {fileID: 8300000, guid: 5a8954cc4cb5348a1a8e67aef2ee3afe, type: 3}
   sfxCollect: {fileID: 8300000, guid: cca3121080620406b89cd6c5029a9b06, type: 3}
@@ -266,7 +266,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 697055943
+  randomSeed: 802587729
   InitialModule:
     serializedVersion: 2
     enabled: 1

@@ -111,6 +111,7 @@ public class Enemy : MonoBehaviour, IDamageable {
 			case 0:
 				speed = speed - 9;
 				print ("I'm dead.");
+				StartCoroutine("GameOver");
 				break;
 			default:
 				print ("Haven't been hit yet");
@@ -139,5 +140,8 @@ public class Enemy : MonoBehaviour, IDamageable {
 	public int MultiplybyFive(int x) {
 		return x * 5;
 	}
+
+	IEnumerator GameOver() 	{ 		float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1); 		yield return new WaitForSeconds (fadeTime); 		Application.LoadLevel(0);  	}
+
  }
 

@@ -64,6 +64,10 @@ public class dropArea : MonoBehaviour {
 				messageText.text = "You made a Panacea! This will cure all wounds! So much more than a hard-to-pronounce name!";
 				print ("You made a Panacea! This will cure all wounds! So much more than a hard-to-pronounce name!");
 				break;
+			case 70:
+				messageText.text = "The Mangragora starts swimming in the Slime. The Mandragora is really enjoying itself. The Slime is not.";
+				print ("The Mangragora starts swimming in the Slime. The Mandragora is really enjoying itself. The Slime is not.");
+				break;
 			case 60:
 				messageText.text = "The three Mandragoras start to dance. Their music is really loud...";
 				print ("The three Mandragoras start to dance. Their music is really loud...");

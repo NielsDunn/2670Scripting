@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -141,7 +142,13 @@ public class Enemy : MonoBehaviour, IDamageable {
 		return x * 5;
 	}
 
-	IEnumerator GameOver() 	{ 		float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1); 		yield return new WaitForSeconds (fadeTime); 		Application.LoadLevel(0);  	}
+	IEnumerator GameOver()
+	{
+		float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1);
+		yield return new WaitForSeconds (fadeTime);
+		SceneManager.LoadScene(0);
+
+	}
 
  }
 
